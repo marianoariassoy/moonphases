@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let normalizer = ScrollTrigger.normalizeScroll();
-
 gsap.defaults({
   ease: Linear.easeNone,
   duration: 0.4,
@@ -100,3 +98,75 @@ const phases = (num) => {
 
   phasesDOM.innerHTML = `DAY ${day}  ${phase}`;
 };
+
+//Message
+
+gsap.set(".earth-txt", {
+  y: 100,
+});
+gsap.set(".message-1", {
+  scale: 0,
+});
+const tl3 = gsap.timeline({});
+tl3.to(".message-1", {
+  delay: 0.5,
+  scale: 1,
+  display: "block",
+  duration: 0.3,
+  opacity: 1,
+});
+tl3.to(".message-1", {
+  duration: 0.2,
+  opacity: 0,
+  delay: 2,
+  display: "none",
+});
+tl3.to(".message-2", {
+  display: "block",
+  duration: 0.3,
+  opacity: 1,
+});
+tl3.to(".message-2", {
+  duration: 0.5,
+  opacity: 0,
+  delay: 2,
+  display: "none",
+});
+tl3.to(".earth-txt", {
+  y: 0,
+  opacity: 1,
+  duration: 0.3,
+});
+
+//Stars
+
+const sky = document.querySelector(".sky");
+
+const createStars = (left, top, opacity) => {
+  const starDOMel = document.createElement("div");
+  starDOMel.classList.add("star");
+  sky.appendChild(starDOMel);
+
+  gsap.set(starDOMel, {
+    left,
+    top,
+    opacity,
+  });
+};
+
+const randomFloat = (min, max) => {
+  return Math.random() * (max - min + 1) + min;
+};
+const randomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+const ancho = window.innerWidth;
+const alto = 8000;
+
+for (let index = 1; index < 800; index++) {
+  x = randomInt(1, ancho);
+  y = randomInt(1, alto);
+  opacity = randomFloat(0.1, 1);
+  createStars(x, y, opacity);
+}
