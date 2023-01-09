@@ -68,9 +68,9 @@ body {
 .earth {
   background-color: rgb(41, 52, 124);
   border-radius: 50%;
-  height: 15vw;
+  height: 13vw;
   position: relative;
-  width: 15vw;
+  width: 13vw;
 }
 .earth-aux {
   border-radius: 50%;
@@ -100,12 +100,12 @@ body {
 .moon {
   background-color: rgb(109, 109, 123);
   border-radius: 50%;
-  height: 3vw;
+  height: 4vw;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 3vw;
+  width: 4vw;
 }
 .moon-shadow {
   background-color: rgba(0, 0, 0, 0.5);
@@ -191,8 +191,8 @@ body {
     width: 35vw;
   }
   .moon {
-    height: 10vw;
-    width: 10vw;
+    height: 12vw;
+    width: 12vw;
   }
   #moon-svg {
     height: 70vw;
