@@ -1,3 +1,3 @@
-<h1> 🌘💪🚀 <br>
- <strong> Moon Phases  <strong> <br>
-With Javascript and Gsap </h1> <br>
+<h1> 🌘💪🚀 </h1> 
+<h1 Moon Phases </h1>  
+<h2>  With Javascript and Gsap </h2> 
