@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Phases</title>
+
+  <link rel="icon" type="image/x-icon" href="./favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+
+    <div class="messages">
+      <div class="message-1">
+        MOON PHASES
+      </div>
+      <div class="message-2">
+        SCROLL <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </div>
+
+    <div class="moon-phases">
+
+      <div class="txt-phases"> </div>
+
+      <div class="moon-main">
+
+        <div class="earth-aux">
+          <div class="moon-main-shadow shadow-1"></div>
+          <div class="moon-main-shadow shadow-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="earth-container">
+
+        <svg id="moon-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="30vw" height="30vw"
+          viewBox="0 0 121 119">
+          <path id="moon-path"
+            d="M120.5,59.5c0,32.6-26.9,59-60.1,59-79.8-3.3-79.8-114.7,0-118,33.2,0,60.1,26.4,60.1,59Z"
+            style="fill: none; stroke: transparent; stroke-miterlimit: 10;" />
+        </svg>
+
+        <div class="moon">
+          <div class="moon-shadow"></div>
+        </div>
+
+        <div class="earth">
+          <div class="earth-txt">
+            <div> YOU 🙂</div> <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="earth-aux">
+            <div class="earth-shadow"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sun">
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i>
+      <div>SUN LIGHT</div>
+    </div>
+
+    <div class="sky"></div>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"
+    integrity="sha512-OCZfe5S3S3eHcIjrhIt7gkZplCm8dztm9yHoe5C1I1VsB9Mb2Oc0mU64jWU4t2ASpBGhIBoE4LjfhFL/wvCYsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+    integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/titles.js"></script>
+  <script src="./js/stars.js"></script>
+</body>
+
+</html>

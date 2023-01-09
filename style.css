@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background-color: rgb(16, 21, 52);
+  color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 13px;
+}
+
+/* Moon phases */
+
+.moon-phases {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+}
+.moon-main {
+  background-color: rgb(109, 109, 123);
+  border-radius: 50%;
+  height: 5vw;
+  position: relative;
+  width: 5vw;
+}
+.moon-main-shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.txt-phases {
+  margin-top: 15px;
+  position: absolute;
+  text-align: center;
+  top: 5vw;
+  width: 100%;
+}
+
+/* Container */
+
+.container {
+  display: grid;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Earth */
+
+.earth-container {
+  display: grid;
+  height: 75vh;
+  place-items: center;
+  position: relative;
+  width: 90vw;
+}
+.earth {
+  background-color: rgb(41, 52, 124);
+  border-radius: 50%;
+  height: 15vw;
+  position: relative;
+  width: 15vw;
+}
+.earth-aux {
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.earth-shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 58%;
+  width: 100%;
+}
+.earth-txt {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: -40px;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Moon */
+
+.moon {
+  background-color: rgb(109, 109, 123);
+  border-radius: 50%;
+  height: 3vw;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 3vw;
+}
+.moon-shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 58%;
+}
+#moon-svg {
+  position: absolute;
+}
+
+/* Sky */
+
+.sky {
+  background-color: rgb(16, 21, 52);
+  height: 8000px;
+  left: 0;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.star {
+  background-color: white;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+
+/* Sun */
+
+.sun {
+  bottom: 30px;
+  color: yellow;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+.sun div {
+  margin: 0 auto;
+  padding-top: 8px;
+  width: 50%;
+}
+
+/* Presentation */
+
+.messages {
+  display: grid;
+  font-size: 6rem;
+  font-weight: 900;
+  height: 100%;
+  line-height: 1;
+  padding: 3rem;
+  place-items: center;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 4000;
+}
+.message-1,
+.message-2 {
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 980px) {
+  .moon-main {
+    height: 15vw;
+    width: 15vw;
+  }
+  .txt-phases {
+    top: 15vw;
+  }
+  .earth {
+    height: 35vw;
+    width: 35vw;
+  }
+  .moon {
+    height: 10vw;
+    width: 10vw;
+  }
+  #moon-svg {
+    height: 70vw;
+    width: 70vw;
+  }
+}
