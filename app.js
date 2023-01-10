@@ -73,9 +73,13 @@ tl2.to(".moon", {
     end: 1.243,
   },
   duration: 6,
+  onComplete: () => {
+    window.scrollTo(0, 0);
+  },
 });
 
 //Fases
+
 const phasesDOM = document.querySelector(".txt-phases");
 let day = 1;
 let phase = "";
