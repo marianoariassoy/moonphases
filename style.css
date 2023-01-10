@@ -1,3 +1,8 @@
+:root {
+  --color-sky: rgb(16, 21, 52);
+  --color-earth: rgb(41, 52, 124);
+  --color-moon: rgb(109, 109, 123);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +10,11 @@
 }
 html,
 body {
-  background-color: rgb(16, 21, 52);
+  background-color: var(--color-sky);
   color: white;
   font-family: "Fira Sans", sans-serif;
   font-size: 13px;
+  overflow-x: hidden;
 }
 
 /* Moon phases */
@@ -23,11 +29,11 @@ body {
   z-index: 1000;
 }
 .moon-main {
-  background-color: rgb(109, 109, 123);
+  background-color: var(--color-moon);
   border-radius: 50%;
-  height: 5vw;
+  height: 10vh;
   position: relative;
-  width: 5vw;
+  width: 10vh;
 }
 .moon-main-shadow {
   background-color: rgba(0, 0, 0, 0.5);
@@ -40,7 +46,7 @@ body {
   margin-top: 15px;
   position: absolute;
   text-align: center;
-  top: 5vw;
+  top: 10vh;
   width: 100%;
 }
 
@@ -56,23 +62,19 @@ body {
   text-align: center;
   width: 100%;
 }
-
-/* Earth */
-
 .earth-container {
   align-items: center;
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 .earth {
-  background-color: rgb(41, 52, 124);
+  background-color: var(--color-earth);
   border-radius: 50%;
-  height: 13vw;
+  height: 25vh;
   position: relative;
-  width: 13vw;
+  width: 25vh;
 }
-.earth-aux {
+.mask {
   border-radius: 50%;
   height: 100%;
   overflow: hidden !important;
@@ -98,38 +100,34 @@ body {
 /* Moon */
 
 .moon {
-  background-color: rgb(109, 109, 123);
+  background-color: var(--color-moon);
   border-radius: 50%;
-  height: 4vw;
-  left: 0;
+  height: 6vh;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  width: 4vw;
+  width: 6vh;
 }
 .moon-shadow {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  bottom: 0;
   height: 100%;
-  left: 0;
   position: absolute;
   width: 58%;
 }
 #moon-svg {
+  height: 48vh;
   position: absolute;
+  width: 48vh;
 }
 
 /* Sky */
 
 .sky {
-  background-color: rgb(16, 21, 52);
+  background-color: var(--color-sky);
   height: 8000px;
-  left: 0;
-  overflow-x: hidden;
+
   position: absolute;
-  top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: -1;
 }
 .star {
@@ -142,7 +140,7 @@ body {
 /* Sun */
 
 .sun {
-  bottom: 30px;
+  bottom: 25px;
   color: yellow;
   position: fixed;
   text-align: center;
@@ -153,12 +151,15 @@ body {
   padding-top: 8px;
   width: 50%;
 }
+.sun i {
+  margin: 0 0.5rem;
+}
 
 /* Presentation */
 
 .messages {
   display: grid;
-  font-size: 6rem;
+  font-size: 10vh;
   font-weight: 900;
   height: 100%;
   line-height: 1;
@@ -167,35 +168,10 @@ body {
   position: fixed;
   text-align: center;
   width: 100%;
-  z-index: 4000;
+  z-index: 2000;
 }
 .message-1,
 .message-2 {
   display: none;
   opacity: 0;
-}
-
-@media (max-width: 980px) {
-  .messages {
-    font-size: 4rem;
-  }
-  .moon-main {
-    height: 15vw;
-    width: 15vw;
-  }
-  .txt-phases {
-    top: 15vw;
-  }
-  .earth {
-    height: 35vw;
-    width: 35vw;
-  }
-  .moon {
-    height: 12vw;
-    width: 12vw;
-  }
-  #moon-svg {
-    height: 70vw;
-    width: 70vw;
-  }
 }

@@ -9,9 +9,9 @@
   <title>Moon Phases 🚀</title>
 
   <meta name="description" content="Made with Gsap, Javascript, CSS, HTML in 2023">
-  <meta property="og:title" content="Moon Phases 🌘" />
+  <meta property="og:title" content="Moon Phases 🚀" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Moon Phases 🌘" />
+  <meta property="og:site_name" content="Moon Phases 🚀" />
   <meta property="og:image" content="./favicon.png" />
   <meta property="og:image:alt" content="Moon Phases" />
 
@@ -31,19 +31,10 @@
 <body>
   <main>
 
-    <div class="messages">
-      <div class="message-1">
-        MOON PHASES
-      </div>
-      <div class="message-2">
-        SCROLL <i class="fa-solid fa-angle-down"></i>
-      </div>
-    </div>
-
     <div class="moon-phases">
       <div class="txt-phases"> </div>
       <div class="moon-main">
-        <div class="earth-aux">
+        <div class="mask">
           <div class="moon-main-shadow shadow-1"></div>
           <div class="moon-main-shadow shadow-2"></div>
         </div>
@@ -52,23 +43,19 @@
 
     <div class="container">
       <div class="earth-container">
-
-        <svg id="moon-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="30vw" height="30vw"
-          viewBox="0 0 121 119">
+        <svg id="moon-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 119">
           <path id="moon-path"
             d="M120.5,59.5c0,32.6-26.9,59-60.1,59-79.8-3.3-79.8-114.7,0-118,33.2,0,60.1,26.4,60.1,59Z"
             style="fill: none; stroke: transparent; stroke-miterlimit: 10;" />
         </svg>
-
         <div class="moon">
           <div class="moon-shadow"></div>
         </div>
-
         <div class="earth">
           <div class="earth-txt">
-            <div> YOU 🙂</div> <i class="fa-solid fa-angle-down"></i>
+            <div>YOU 🙂</div> <i class="fa-solid fa-angle-down"></i>
           </div>
-          <div class="earth-aux">
+          <div class="mask">
             <div class="earth-shadow"></div>
           </div>
         </div>
@@ -76,18 +63,27 @@
     </div>
 
     <div class="sun">
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
-      <i class="fa-solid fa-angle-up"></i> &nbsp;
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
       <i class="fa-solid fa-angle-up"></i>
       <div>SUN LIGHT</div>
+    </div>
+
+    <div class="messages">
+      <div class="message-1">
+        MOON PHASES
+      </div>
+      <div class="message-2">
+        SCROLL <i class="fa-solid fa-angle-down"></i>
+      </div>
     </div>
 
     <div class="sky"></div>
@@ -106,7 +102,7 @@
     integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="./js/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
