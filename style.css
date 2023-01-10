@@ -70,9 +70,9 @@ body {
 .earth {
   background-color: var(--color-earth);
   border-radius: 50%;
-  height: 25vh;
+  height: 22vh;
   position: relative;
-  width: 25vh;
+  width: 22vh;
 }
 .mask {
   border-radius: 50%;
