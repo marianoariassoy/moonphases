@@ -102,10 +102,10 @@ body {
 .moon {
   background-color: var(--color-moon);
   border-radius: 50%;
-  height: 6vh;
+  height: 7vh;
   overflow: hidden;
   position: absolute;
-  width: 6vh;
+  width: 7vh;
 }
 .moon-shadow {
   background-color: rgba(0, 0, 0, 0.5);
