@@ -126,6 +126,7 @@ tl3.to(".message-1", {
   display: "none",
 });
 tl3.to(".message-2", {
+  delay: 0.5,
   display: "block",
   duration: 0.3,
   opacity: 1,
@@ -139,10 +140,6 @@ tl3.to(".message-2", {
 tl3.to(".earth-txt", {
   y: 0,
   opacity: 1,
-  duration: 0.3,
-});
-tl3.to(".sun", {
-  bottom: 25,
   duration: 0.3,
 });
 

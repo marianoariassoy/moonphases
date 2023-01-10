@@ -140,7 +140,7 @@ body {
 /* Sun */
 
 .sun {
-  bottom: -50px;
+  bottom: 25px;
   color: yellow;
   position: fixed;
   text-align: center;
