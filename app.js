@@ -21,7 +21,7 @@ gsap
       markers: false,
       start: "-50 top",
       end: "+=8000 100%",
-      scrub: true,
+      scrub: 1,
       pin: false,
       onUpdate: (self) => {
         phases(self.progress);
