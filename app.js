@@ -18,7 +18,6 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".moon-main",
-      markers: false,
       start: "-50 top",
       end: "+=8000 100%",
       scrub: 1,
@@ -57,7 +56,6 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".container",
-      markers: false,
       start: "-50 top",
       end: "+=8000 100%",
       scrub: true,
