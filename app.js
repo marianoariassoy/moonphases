@@ -9,38 +9,37 @@ gsap.defaults({
 
 gsap.set(".shadow-1", {
   xPercent: 0,
-  borderRadius: 50,
 });
 gsap.set(".shadow-2", {
   xPercent: 102,
-  borderRadius: 50,
 });
 
-const tl1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".moon-main",
-    markers: false,
-    start: "-50 top",
-    end: "+=8000 100%",
-    scrub: true,
-    pin: false,
-    onUpdate: (self) => {
-      phases(self.progress);
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".moon-main",
+      markers: false,
+      start: "-50 top",
+      end: "+=8000 100%",
+      scrub: true,
+      pin: false,
+      onUpdate: (self) => {
+        phases(self.progress);
+      },
     },
-  },
-});
-tl1.to(".shadow-1", {
-  xPercent: -50,
-});
-tl1.to(".shadow-1", {
-  xPercent: -102,
-});
-tl1.to(".shadow-2", {
-  xPercent: 50,
-});
-tl1.to(".shadow-2", {
-  xPercent: 0,
-});
+  })
+  .to(".shadow-1", {
+    xPercent: -50,
+  })
+  .to(".shadow-1", {
+    xPercent: -102,
+  })
+  .to(".shadow-2", {
+    xPercent: 50,
+  })
+  .to(".shadow-2", {
+    xPercent: 0,
+  });
 
 //Moon
 
@@ -54,29 +53,30 @@ gsap.set(".moon", {
     align: "#moon-path",
   },
 });
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".container",
-    markers: false,
-    start: "-50 top",
-    end: "+=8000 100%",
-    scrub: true,
-    pin: false,
-    markers: false,
-  },
-});
-tl2.to(".moon", {
-  motionPath: {
-    path: "#moon-path",
-    align: "#moon-path",
-    start: 0.243,
-    end: 1.243,
-  },
-  duration: 6,
-  onComplete: () => {
-    window.scrollTo(0, 0);
-  },
-});
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".container",
+      markers: false,
+      start: "-50 top",
+      end: "+=8000 100%",
+      scrub: true,
+      pin: false,
+      markers: false,
+    },
+  })
+  .to(".moon", {
+    motionPath: {
+      path: "#moon-path",
+      align: "#moon-path",
+      start: 0.243,
+      end: 1.243,
+    },
+    duration: 6,
+    onComplete: () => {
+      window.scrollTo(0, 0);
+    },
+  });
 
 //Fases
 
@@ -111,50 +111,50 @@ gsap.set(".earth-txt", {
 gsap.set(".message-1", {
   scale: 0,
 });
-const tl3 = gsap.timeline({});
-tl3.to(".message-1", {
-  delay: 0.5,
-  scale: 1,
-  display: "block",
-  duration: 0.3,
-  opacity: 1,
-});
-tl3.to(".message-1", {
-  duration: 0.2,
-  opacity: 0,
-  delay: 2,
-  display: "none",
-});
-tl3.to(".message-2", {
-  delay: 0.5,
-  display: "block",
-  duration: 0.3,
-  opacity: 1,
-});
-tl3.to(".message-2", {
-  duration: 0.5,
-  opacity: 0,
-  delay: 2,
-  display: "none",
-});
-tl3.to(".earth-txt", {
-  y: 0,
-  opacity: 1,
-  duration: 0.3,
-});
+gsap
+  .timeline()
+  .to(".message-1", {
+    delay: 0.5,
+    scale: 1,
+    display: "block",
+    duration: 0.3,
+    opacity: 1,
+  })
+  .to(".message-1", {
+    duration: 0.2,
+    opacity: 0,
+    delay: 2,
+    display: "none",
+  })
+  .to(".message-2", {
+    delay: 0.5,
+    display: "block",
+    duration: 0.3,
+    opacity: 1,
+  })
+  .to(".message-2", {
+    duration: 0.5,
+    opacity: 0,
+    delay: 2,
+    display: "none",
+  })
+  .to(".earth-txt", {
+    y: 0,
+    opacity: 1,
+    duration: 0.3,
+  });
 
 //Stars
 
 const sky = document.querySelector(".sky");
-
-const createStars = (left, top, opacity) => {
+const createStars = (left, top, opacity, delay) => {
   const starDOMel = document.createElement("div");
   starDOMel.classList.add("star");
   sky.appendChild(starDOMel);
-
   gsap.set(starDOMel, {
     left,
     top,
+    delay,
     opacity,
   });
 };
@@ -173,5 +173,6 @@ for (let index = 1; index < 800; index++) {
   x = randomInt(1, ancho);
   y = randomInt(1, alto);
   opacity = randomFloat(0.1, 1);
-  createStars(x, y, opacity);
+  delay = randomFloat(0, 3);
+  createStars(x, y, opacity, delay);
 }
