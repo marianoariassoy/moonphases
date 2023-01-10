@@ -141,6 +141,10 @@ tl3.to(".earth-txt", {
   opacity: 1,
   duration: 0.3,
 });
+tl3.to(".sun", {
+  bottom: 25,
+  duration: 0.3,
+});
 
 //Stars
 
