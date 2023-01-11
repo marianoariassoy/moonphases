@@ -20,7 +20,7 @@ gsap
       trigger: ".moon-main",
       start: "-50 top",
       end: "+=8000 100%",
-      scrub: 1,
+      scrub: true,
       pin: false,
       onUpdate: (self) => {
         phases(self.progress);
